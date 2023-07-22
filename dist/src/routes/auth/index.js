@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.authRoutes = void 0;
+const express_1 = require("express");
+const login_1 = require("./login");
+const signup_1 = require("./signup");
+const refreshToken_1 = require("./refreshToken");
+const routes = (0, express_1.Router)();
+routes.use(login_1.loginRouter);
+routes.use(signup_1.signupRouter);
+routes.use(refreshToken_1.refreshTokenRouter);
+exports.authRoutes = routes;
